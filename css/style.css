@@ -18,6 +18,18 @@ a {
 
     padding: 16px 0px;
     font-size: 18px;
+
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+}
+
+img:hover {
+    filter: drop-shadow(16px 16px 20px var(--secondary-color));
+
+    transition: 0.2s ease-in-out;
 }
 
 ul {
