@@ -1,0 +1,88 @@
+.testimony {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--yellow-1);
+
+    overflow: hidden;
+}
+
+.testimony img {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.letter {
+    background: url("../../img/dec/top-right.svg") no-repeat bottom 20px right 20px;
+    padding: 40px 40px 80px 80px;
+
+    align-self: end;
+
+}
+
+.letter p {
+    margin-bottom: 32px;
+    max-width: 32ch;
+
+    
+    position: relative;
+}
+
+.letter p::before {
+    content: '“';
+    font-size: 4rem;
+    color: var(--p2);
+    display: inline-block;
+
+    position: absolute;
+
+    top: -25px;
+    left: -45px;
+}
+
+.letter p::after {
+    content: '”';
+    font-size: 4rem;
+    color: var(--p2);
+    display: inline-block;
+
+    position: absolute;
+}
+
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar img {
+    width: 115px;
+    height: 115px;
+    border-radius: 100%;
+}
+
+.avatar span {
+    font-style: italic;
+}
+
+@media (max-width:800px) {
+    .testimony {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .letter {
+        padding: 40px 20px;
+        justify-self: center;
+    }
+    .testimony img {
+    height: 200px;
+    }
+    
+    .avatar img {
+        width: 100px;
+        height: 100px;
+    }
+}

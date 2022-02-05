@@ -1,0 +1,230 @@
+
+.buy-select {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+
+    padding-bottom: 120px;
+
+    margin-top: -150px;
+}
+
+.buy-select h3 {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.buy-select h3::before {
+    content: "";
+    width: 6px;
+    height: 8px;
+    display: inline-block;
+    background-color: var(--yellow-1);
+
+    position: absolute;
+    left: -10px;
+}
+
+.buy-product {
+    background-color: var(--second-dark);
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+
+    gap: 20px;
+}
+.buy-product > label {
+    grid-column: initial;
+}
+
+.buy-product > * {
+    grid-column: 1 / -1;
+}
+
+.buy-product, .buy-data {
+    padding: 60px 50px;
+}
+
+
+.buy-data {
+    background-color: var(--secondary-color);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.buy-data h3 {
+    grid-column: span 2;
+    color: var(--primary-color);
+}
+
+.buy-data label {
+    color: var(--primary-color);
+}
+
+.buy-data div:nth-child(3) {
+    grid-column: 2;
+}
+
+.buy-data div:nth-child(4) {
+    grid-column: span 2;
+}
+
+.buy-data div:nth-child(5) {
+    grid-column: span 2;
+}
+
+/* 
+
+Bikecraft e Seguros
+
+*/
+
+
+.buy-product label {
+    padding: 12px 16px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+    margin: 20px auto;
+
+    font-weight: 600;
+
+    color: var(--secondary-color);
+    background-color: var(--gray-2);
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.buy-product label::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--gray-1);
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.buy-product label:hover {
+    background-color: gray;
+}
+
+.buy-product input:focus + label {
+    box-shadow: 0 0 0 2px var(--yellow-1);
+}
+
+.buy-content {
+    display: none;
+}
+
+
+.buy-product input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    width: 10px;
+}
+
+.buy-product label span {
+    display: none;
+}
+
+.buy-product input:checked + label span {
+    display: inline-block;
+}
+
+.buy-product input:checked + label {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#bikecraft:checked ~ #buy-bikecraft, #insurance:checked ~ #buy-insurance {
+    display: block;
+}
+
+.buy-product input:checked + label::before {
+    box-shadow: inset 0 0 0 3px var(--secondary-color), inset 0 0 0 6px var(--primary-color);
+}
+
+.buy-content h3 {
+    margin: 20px auto;
+}
+
+/* Details */
+
+.buy-details {
+    background-color: var(--secondary-color);
+    grid-template-columns: auto auto;
+
+    padding: 20px;
+    gap: 10px;
+    border-radius: 5px;
+
+    display: none;
+}
+
+.buy-details ul li{
+    color: var(--primary-color);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 0.85em;
+}
+
+.buy-details ul li img {
+    width: 16px;
+}
+
+.buy-product input:checked + label + .buy-details {
+    display: grid;
+}
+
+@media (max-width:1200px) {
+    .buy-product, .buy-data {
+        padding: 32px;
+    }
+}
+
+
+@media (max-width:800px) {
+    .buy-select {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .buy-data > * {
+        grid-column: 1/-1;
+    }
+
+    .buy-data div:nth-child(3) {
+        grid-column: 1/-1;
+    }
+
+    .buy-product {
+        border-radius: 5px;
+    }
+    
+    .buy-data {
+        border-radius: 5px;
+    }
+}

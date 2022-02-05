@@ -1,0 +1,17 @@
+.term {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.term section {
+    padding-bottom: 40px;
+}
+
+.term h2 {
+    padding-bottom: 20px;
+}
+
+.term p {
+    padding-bottom: 20px;
+    max-width: 75ch;
+}

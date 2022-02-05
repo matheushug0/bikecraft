@@ -1,0 +1,158 @@
+
+.nimbus-bg {
+    background-color: var(--primary-color);
+}
+
+.nimbus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.nimbus-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+
+    gap: 30px;
+}
+
+#nimbus1 {
+    grid-column: 1/-1;
+}
+
+.nimbus-buy p {
+    margin-bottom: 20px;
+
+    font-size: 1.25em;
+}
+
+.buy-btn {
+    display: grid;
+    grid-template-columns: max-content auto;
+
+    gap: 10px;
+}
+
+.buy-btn a {
+    grid-row: span 2;
+
+    align-self: center;
+}
+
+.buy-btn span{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 5px;
+    align-items: center;
+}
+
+/* Infos */
+
+.nimbus-info {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.nimbus-info h3 {
+    margin-bottom: 20px;
+    font-size: 1.25em;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background-color: var(--second-dark);
+
+    border-radius: 15px;
+}
+
+.info-item p {
+    font-size: 1em;
+}
+
+.tecnical {
+    padding: 20px;
+
+    background-color: var(--second-dark);
+    border-radius: 15px;
+}
+
+.tecnical ul li{
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 15px;
+}
+
+.tecnical li {
+    color: var(--secondary-color);
+}
+
+/* Endpage */
+
+.endpage-bg {
+    background-color: var(--primary-color);
+
+    box-shadow: inset 0px 100px 0px var(--secondary-color); 
+}
+
+.endpage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.endpage-content {
+    padding-top: 180px;
+    padding-bottom: 60px;
+}
+
+.endpage-content p {
+    padding: 20px 0px;
+}
+
+.endpage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:800px) {
+    .nimbus {
+        grid-template-columns: 1fr;
+    }
+
+    .buy-btn {
+        grid-template-columns: 1fr;
+    }
+
+    .endpage {
+        grid-template-columns: 1fr;
+    }
+
+    .endpage-bg {
+        box-shadow: none;
+
+        box-shadow: inset 0px 50px 0px var(--secondary-color);
+    }
+
+    .endpage-content {
+        padding-top: 0px;
+    }
+
+    .endpage img {
+        height: 200px;
+        width: 100%;
+
+        object-fit: cover;
+    }
+}

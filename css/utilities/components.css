@@ -1,0 +1,72 @@
+
+/* Button */
+.btn {
+    display: inline-block;
+    background: linear-gradient(var(--yellow-1), var(--yellow-2));
+    padding: 16px 32px;
+    color: var(--yellow-3);
+  
+    border-radius: 0.3em;
+  
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    
+    font-size: 18px;
+    line-height: 1.33;
+    font-weight: bold;
+
+    transition: ease-in-out 0.3s;
+
+    max-width: max-content;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(var(--yellow-4), var(--yellow-5));
+  }
+  
+  @media (max-width: 600px) {
+    .btn {
+      padding: 12px 16px;
+      font-size: 1.1rem;
+    }
+  }
+
+
+.arrow::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+
+  transition: ease 0.3s;
+}
+
+.arrow:hover::after {
+  transform: translateX(5px); 
+}
+
+/* coNTAINER */
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+
+  max-width: 1200px;
+}
+
+/* Títulos internos */
+
+.title-bg {
+  background: var(--primary-color) url("../../img/dec/top-right.svg") no-repeat top 20px right 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (max-width:800px) {
+  .title-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
