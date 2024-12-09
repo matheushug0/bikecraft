@@ -8,3 +8,8 @@
 ### [Link do Projeto no Vercel](https://bikecraft-orcin.vercel.app/)
 
 <img src="./images/1.jpg">
+<img src="./images/2.jpg">
+<img src="./images/3.jpg">
+<img src="./images/4.jpg">
+<img src="./images/5.jpg">
+<img src="./images/6.jpg">
